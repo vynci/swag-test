@@ -1,0 +1,115 @@
+---
+swagger: "2.0"
+info:
+  description: "SnapRX - API"
+  version: "1.0.0"
+  title: "SnapRX - API"
+host: "stg.ph.api.snaprx.mclinica.com"
+basePath: "/api/1"
+schemes:
+- "http"
+- "https"
+consumes:
+- "application/json"
+- "text/xml"
+produces:
+- "application/json"
+- "text/html"
+paths:
+  /classes/pharmacy:
+    get:
+      description: "Returns all pharmacies from the system that the user has access\
+        \ to"
+      operationId: "classesPharmacyGET"
+      parameters:
+      - name: "X-Warp-API-Key"
+        in: "header"
+        description: "warp-server API Key"
+        required: false
+        type: "string"
+        format: "string"
+        default: "1x0jpzj3kp0go08sow0s4395z1tgzinc48c8s0ccss"
+      - name: "limit"
+        in: "query"
+        description: "Limit of returned data"
+        required: false
+        type: "integer"
+        format: "integer"
+        default: 10
+      responses:
+        200:
+          description: "Fetch list of pharmacies"
+      x-swagger-router-controller: "Default"
+  /classes/transactionitem:
+    get:
+      description: "Returns all transaction items from the system that the user has\
+        \ access to"
+      operationId: "classesTransactionitemGET"
+      parameters:
+      - name: "X-Warp-API-Key"
+        in: "header"
+        description: "warp-server API Key"
+        required: false
+        type: "string"
+        format: "string"
+        default: "1x0jpzj3kp0go08sow0s4395z1tgzinc48c8s0ccss"
+      - name: "limit"
+        in: "query"
+        description: "Limit of returned data"
+        required: false
+        type: "integer"
+        format: "integer"
+        default: 10
+      responses:
+        200:
+          description: "Fetch list of transaction items"
+      x-swagger-router-controller: "Default"
+  /classes/product:
+    get:
+      description: "Returns all product items from the system that the user has\
+        \ access to"
+      operationId: "classesProductitemGET"
+      parameters:
+      - name: "X-Warp-API-Key"
+        in: "header"
+        description: "warp-server API Key"
+        required: false
+        type: "string"
+        format: "string"
+        default: "1x0jpzj3kp0go08sow0s4395z1tgzinc48c8s0ccss"
+      - name: "limit"
+        in: "query"
+        description: "Limit of returned data"
+        required: false
+        type: "integer"
+        format: "integer"
+        default: 10
+      responses:
+        200:
+          description: "Fetch list of product items"
+      x-swagger-router-controller: "Default"  
+  /classes/doctor:
+    get:
+      description: "Returns all doctor items from the system that the user has\
+        \ access to"
+      operationId: "classesDoctoritemGET"
+      parameters:
+      - name: "X-Warp-API-Key"
+        in: "header"
+        description: "warp-server API Key"
+        required: false
+        type: "string"
+        format: "string"
+        default: "1x0jpzj3kp0go08sow0s4395z1tgzinc48c8s0ccss"
+      - name: "limit"
+        in: "query"
+        description: "Limit of returned data"
+        required: false
+        type: "integer"
+        format: "integer"
+        default: 10
+      responses:
+        200:
+          description: "Fetch list of doctor items"
+      x-swagger-router-controller: "Default"           
+definitions: {}
